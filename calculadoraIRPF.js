@@ -39,7 +39,7 @@ if ((TRAMOS.length+1)==IRPF.length) {
         if ((TRAMOS[index]+subida)>=TRAMOS[index+1]
             || !noJump) {
             index++;
-            subida=TRAMOS[index]*(IRPF[index]-IRPF[index+1]);
+            subida = IRPF[index+1]>IRPF[index] ? TRAMOS[index]*(IRPF[index+1]-IRPF[index]) : 0;
         };
         /* Me gustan los números "redondos" */
         subida+=5;
